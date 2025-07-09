@@ -7,17 +7,17 @@ def create_normal_converter():
 
     # create a group
     normal_convert_group = bpy.data.node_groups.new('Normal_Convert', 'ShaderNodeTree')
-
+    print("create_normal_converter executing...")
     # create group inputs
     group_inputs = normal_convert_group.nodes.new('NodeGroupInput')
     group_inputs.location = (-500, 0)
-    normal_convert_group.inputs.new('NodeSocketColor', 'Color')
-    normal_convert_group.inputs.new('NodeSocketFloat', 'Factor')
+    normal_convert_group.interface.new_socket("Color", in_out='INPUT', socket_type='NodeSocketColor', parent=None)
+    normal_convert_group.interface.new_socket("Factor", in_out='INPUT', socket_type='NodeSocketFloat', parent=None)
 
     # create group output
     group_outputs = normal_convert_group.nodes.new('NodeGroupOutput')
     group_outputs.location = (500, 0)
-    normal_convert_group.outputs.new('NodeSocketColor', 'Color')
+    normal_convert_group.interface.new_socket("Color", in_out='OUTPUT', socket_type='NodeSocketColor', parent=None)
 
     # create nodes
     node_separate_rgb = normal_convert_group.nodes.new('ShaderNodeSeparateRGB')
