@@ -1,4 +1,4 @@
-# UE Texture Importer for Blender
+# UE Texture Importer for Blender with 4.0 and Marvel Rivals changes
 
 ## Overview
 
@@ -47,7 +47,7 @@ Note: This addon requires the PSK / PSA toolbar addon to be installed and enable
 
 ## Requirements
 
-- Blender 3.0 or later.
+- Blender 4.0 or later.
 - A JSON file with material definitions and corresponding texture paths.
 
 ## Troubleshooting
