@@ -86,9 +86,9 @@ def setup_material(context, json_file_path, texture_directories):
             normal_converter.node_tree = bpy.data.node_groups["Normal_Convert"]
             normal_converter.location = (-593, -810)
 
-        principled_node.inputs[8].default_value = 0.008
-        principled_node.inputs[9].default_value = (1.0, 0.2, 0.1)
-        principled_node.inputs[12].default_value = 0.8
+        principled_node.inputs["Subsurface Weight"].default_value = 0.008
+        principled_node.inputs["Subsurface Radius"].default_value = (1.0, 0.2, 0.1)
+        principled_node.inputs["Subsurface Anisotropy"].default_value = 0.8
         mix_rgb_node.blend_type = "MULTIPLY"
         mix_rgb_node2.blend_type = "MULTIPLY"
         mix_rgb_node.use_clamp = True
